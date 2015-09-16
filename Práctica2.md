@@ -15,7 +15,7 @@ y a continuación la copiamos la clave:
 root@maquina2 ~]# ssh maquina1 -l root
 ![imagen] (https://github.com/manujb90/swap1415/blob/master/Imagenes/P1/ssh1.png)
 
-Por último programamos una tarea con crontab que llevará a cabo la actualización del contenido del directorio /var/www/ entre las dos maquinas:
+Por último programamos una tarea con crontab que llevará a cabo la actualización del contenido del directorio /var/www/ entre las dos maquinas añadiendo la siguiente linea:
 	*  1   * * *   root   rsync -avz -e ssh
 root@192.168.1.151:/var/www/ /var/www/
 
