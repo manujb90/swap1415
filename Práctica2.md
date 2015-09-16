@@ -9,6 +9,9 @@ y probamos a copiar la carpeta con el contenido del servidor web con el comando:
 
 Generamos una clave para el SSH mediante el comando:
 	ssh-keygen -t dsa
+y a continuación la copiamos la clave:
+	ssh-copy-ip -i .ssh/id_dsa.pub root@192.168.1.50
 
-
+root@maquina2 ~]# ssh maquina1 -l root
+![imagen] (https://github.com/manujb90/swap1415/blob/master/Imagenes/P1/ssh1.png)
 	 	
