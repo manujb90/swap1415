@@ -25,4 +25,9 @@ maestro-esclavo:
 
 En primer lugar configuramos el mysql en el el maestro, para lo que necesitaremos editar el archivo de confiruración /etc/mysql/my.conf con las lineas que se indican en el guion.
 
-Hacemos lo mismo en el escalvo pero poniendo el server-id a 2 y reiniciamos el servicio en ambas para aplicar los cambios. 	
+Hacemos lo mismo en el escalvo pero poniendo el server-id a 2 y reiniciamos el servicio en ambas para aplicar los cambios.
+
+Tras realizar la configuración maestro/esclavo, de la que olvidé sacar capturas, pero que es trivial siguiendo los pasos del guion, vemos con el comando SHOW SLAVE STATUS\G que la variable "Secons_Behind_Master" es distinta de "null":
+
+![imagen] (https://github.com/manujb90/swap1415/blob/master/Imagenes/P5/show_slave.png)
+	
