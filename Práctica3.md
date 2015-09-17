@@ -1,24 +1,20 @@
 # swap1415
 
-# Práctica 2 : Clonar información de un sitio web
+# Práctica 3 : Balanceo de carga
 
-Instalamos el RSYNC mediante el comando:
-	sudo apt-get install rsync
-y probamos a copiar la carpeta con el contenido del servidor web con el comando:
-	rsync -avz -e ssh root@maquina1:/var/www/ /var/www/
+Creamos una nueva máquina virtual para el balanceador, en la que instalaremos nginx y haproxy.
 
-Generamos una clave para el SSH mediante el comando:
-	ssh-keygen -t dsa
-y a continuación la copiamos la clave:
-	ssh-copy-ip -i .ssh/id_dsa.pub root@192.168.1.50
+Una vez instalado nginx como se detalla en el guion, procedemos a modificar el .conf:
 
-root@maquina2 ~]# ssh maquina1 -l root
-![imagen] (https://github.com/manujb90/swap1415/blob/master/Imagenes/P1/ssh1.png)
+![imagen] (https://github.com/manujb90/swap1415/blob/master/Imagenes/P3/conf-nginx.png)
 
-Por último programamos una tarea con crontab que llevará a cabo la actualización del contenido del directorio /var/www/ entre las dos maquinas añadiendo la siguiente linea:
-	*  1   * * *   root   rsync -avz -e ssh
-root@192.168.1.151:/var/www/ /var/www/
+y probamos su funcionamiento una vez configurado, asegurandonos de que entra cada vez en una maquina, ya que ambas tienen elmismo peso:
 
 
+![imagen] (https://github.com/manujb90/swap1415/blob/master/Imagenes/P3/prueba_balan.png)
 
+A continuación cambiamos los pesos de las maquinas, asignandole 2 a la segunda maquina (Suponiendo en este caso que es el doble de potente que la primera, aunque sean iguales):
+
+
+![imagen] (https://github.com/manujb90/swap1415/blob/master/Imagenes/P3/balanc_peso.png)
 	 	
