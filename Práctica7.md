@@ -9,7 +9,7 @@ sudo apt-get install nfs-kernel-server nfs-common rpcbind
 
 A continuación reiniciamos la maquina virtual para ponerlo en funcionamiento y comprobamos que efectivamente se ha instalado correctamente con "grep nfs4 /proc/filesystems":
 
-![imagen] (https://github.com/manujb90/swap1415/blob/master/Imagenes/P6/fstab-2.png)
+![imagen] (https://github.com/manujb90/swap1415/blob/master/Imagenes/P7/prueba_nfs.png)
 
 
 Fuente: http://somebooks.es/?p=5598&page=2
