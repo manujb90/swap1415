@@ -14,4 +14,8 @@ Despues de crear el directorio donde se montará la unidad RAID, comprobamos su e
 
 ![imagen] (https://github.com/manujb90/swap1415/blob/master/Imagenes/P6/estado_raid1.png)
 
+Por último, entramos al archivo de configuración "/etc/fstab/", en el que indicaremos el uuid del raid,y que podremos consultarlo con ls -l /dev/disk/bu-uuid:
+
+![imagen] (https://github.com/manujb90/swap1415/blob/master/Imagenes/P6/fstab-2.png)
+
 	
