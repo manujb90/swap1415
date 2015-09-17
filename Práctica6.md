@@ -1,33 +1,17 @@
 # swap1415
 
-# Práctica 4 : Comprobar el rendimiento de servidores web
+# Práctica 6 : Configuración de discos en RAID
 
+Tras añadir mediante VirtualBox 2 discos duros nuevos e iguales a una maquina virtual ya creada y configurada, procedemos a la creación del raid.
 
-En primer lugar creamos la base de datos en la maquina maestra (Maquina 1):
+En primer lugar instalamos el mdadm con apt-get.
 
-![imagen] (https://github.com/manujb90/swap1415/blob/master/Imagenes/P5/crear_DB.png)
+Despues, mediante el comando "sudo mdadm -C /dev/md0 --level=raid1 --raid-devices=2 /dev/sdb /dev/sdc", creamos el dispositivo RAID, al que despues daremos formato con "mkfs /dev/md0.
 
-Y a continuación introducimos algunos datos en esta:
+![imagen] (https://github.com/manujb90/swap1415/blob/master/Imagenes/P6/crear_raid1.png)
 
-![imagen] (https://github.com/manujb90/swap1415/blob/master/Imagenes/P5/crear_DB_datos.png)
+Despues de crear el directorio donde se montará la unidad RAID, comprobamos su estado ejecutando "sudo mdadm --detail /dev/md0:
 
-Probamos a hacer una copia y vemos que efectivamente se realiza:
+![imagen] (https://github.com/manujb90/swap1415/blob/master/Imagenes/P6/estado_raid1.png)
 
-![imagen] (https://github.com/manujb90/swap1415/blob/master/Imagenes/P5/copia_DB.png)
-
-
-
-
-
-Replicación de BD mediante una configuración
-maestro-esclavo:
-
-
-En primer lugar configuramos el mysql en el el maestro, para lo que necesitaremos editar el archivo de confiruración /etc/mysql/my.conf con las lineas que se indican en el guion.
-
-Hacemos lo mismo en el escalvo pero poniendo el server-id a 2 y reiniciamos el servicio en ambas para aplicar los cambios.
-
-Tras realizar la configuración maestro/esclavo, de la que olvidé sacar capturas, pero que es trivial siguiendo los pasos del guion, vemos con el comando SHOW SLAVE STATUS\G que la variable "Secons_Behind_Master" es distinta de "null":
-
-![imagen] (https://github.com/manujb90/swap1415/blob/master/Imagenes/P5/show_slave.png)
 	
