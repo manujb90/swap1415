@@ -3,7 +3,6 @@
 # Práctica 4 : Comprobar el rendimiento de servidores web
 
 
-![imagen] (https://github.com/manujb90/swap1415/blob/master/Imagenes/P3/prueba_haproxy.png)
 En primer lugar creamos la base de datos en la maquina maestra (Maquina 1):
 
 ![imagen] (https://github.com/manujb90/swap1415/blob/master/Imagenes/P5/crear_DB.png)
