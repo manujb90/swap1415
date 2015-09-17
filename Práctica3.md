@@ -17,4 +17,16 @@ A continuación cambiamos los pesos de las maquinas, asignandole 2 a la segunda m
 
 
 ![imagen] (https://github.com/manujb90/swap1415/blob/master/Imagenes/P3/balanc_peso.png)
+
+Ahora instalaremos haproxy como se detalla en el guion, procediendo despues a la modificación del archivo haproxy.cfg:
+
+
+![imagen] (https://github.com/manujb90/swap1415/blob/master/Imagenes/P3/conf_haproxy.png)
+
+y probando por último el funcionamiento de este:
+
+![imagen] (https://github.com/manujb90/swap1415/blob/master/Imagenes/P3/prueba_haproxy.png)
+
+
+
 	 	
