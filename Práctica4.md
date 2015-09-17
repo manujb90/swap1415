@@ -6,7 +6,7 @@
 ![imagen] (https://github.com/manujb90/swap1415/blob/master/Imagenes/P3/prueba_haproxy.png)
 
 
-ab -n 1000 -c 10 192.168.56.10/script.php
+`ab -n 1000 -c 10 192.168.56.10/script.php
 
 Benchmarking 192.168.56.10 (be patient)
 Completed 100 requests
@@ -50,5 +50,5 @@ Percentage of the requests served within a certain time (ms)
   95%     55
   98%     62
   99%     69
- 100%     83 (longest request)
+ 100%     83 (longest request)`
 	 	
